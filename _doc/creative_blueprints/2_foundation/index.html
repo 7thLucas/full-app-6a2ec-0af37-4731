@@ -1,40 +1,73 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+  .mode-landscape .sl-body { flex-direction: row; align-items: stretch; }
+  .mode-portrait .sl-body { flex-direction: column; }
+  .mode-portrait .sl-visual-col { display: none; }
 </style>
 <section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#1e40af;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#1e40af; border-color:#1e40af30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
+  <div class="flex flex-col h-full p-12">
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Financial markets are complex and high-risk. Most aspiring traders lack structured education and practice environments, leading to costly mistakes and loss of capital.</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Aspiring traders face a critical knowledge gap. Without systematic education, real-time practice tools, and mentorship, they make costly mistakes in live markets. The result: lost capital, eroded confidence, and missed opportunities.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#1e40af;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#1e40af;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">New traders often enter markets unprepared, relying on gut instinct or unvetted advice. Without proper foundational knowledge, risk management frameworks, and safe practice environments, they face significant financial losses and emotional stress.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">Aspiring retail traders, financial professionals seeking deeper market knowledge, and individuals looking to build sustainable wealth through educated trading.</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Democratize access to professional-grade trading education and create a community where traders learn systematically before risking real capital.</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Financial Education</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Trading Skills</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Risk Management</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Market Mastery</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Hands-On Learning</span></div>
-      <div class="mt-8"><data-attribution /></div>
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="text-xs font-semibold tracking-widest uppercase mb-2" style="color: #f59e0b;">The Challenge</div>
+      <h2 class="font-black text-slate-900" style="font-size: 2.2rem; line-height: 1.15;">Why Most New Traders Fail Before They Begin</h2>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://localhost:8001/common/image-generation?prompt=frustrated+trader+looking+at+declining+stock+chart+on+computer+screen+financial+stress&amp;keyspace=v37opsfc&amp;user_id=4731" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Body -->
+    <div class="sl-body flex flex-1 gap-8">
+
+      <!-- Problem column -->
+      <div class="flex-1 flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black" style="background: #dc2626;">!</div>
+          <span class="font-bold text-slate-900 text-base">The Problem</span>
+        </div>
+        <div class="rounded-2xl p-6 flex-1 flex flex-col gap-4" style="background: #fef2f2; border: 1px solid #fecaca;">
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #dc2626;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Beginners learn by losing.</strong> Most new traders enter real markets with no formal training, suffering avoidable losses that erode both capital and confidence from day one.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #dc2626;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">No safe place to practice.</strong> Existing paper-trading tools lack structure, guidance, or a clear curriculum — leaving learners without a reliable path forward.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #dc2626;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Overwhelming complexity.</strong> Trading spans charts, strategy, psychology, and risk management — all at once, with no accessible on-ramp for the uninitiated.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution column -->
+      <div class="flex-1 flex flex-col">
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black" style="background: #1e3a5f;">✓</div>
+          <span class="font-bold text-slate-900 text-base">The Solution</span>
+        </div>
+        <div class="rounded-2xl p-6 flex-1 flex flex-col gap-4" style="background: #eff6ff; border: 1px solid #bfdbfe;">
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #1e3a5f;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Structured learning paths.</strong> Trading Academy guides learners step-by-step — from market basics through trading strategy — in a deliberate, progressive curriculum.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #1e3a5f;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Zero real-money risk.</strong> Every concept is taught and practiced without touching real capital — building skill and confidence inside a completely safe environment.</p>
+          </div>
+          <div class="flex gap-3">
+            <span class="font-bold mt-0.5 flex-shrink-0" style="color: #1e3a5f;">→</span>
+            <p class="text-slate-700 text-sm leading-relaxed"><strong class="text-slate-900">Mobile-first &amp; accessible.</strong> Flutter-built for iOS and Android — anyone, anywhere can begin their trading education whenever they're ready.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Supporting visual -->
+      <div class="sl-visual-col rounded-2xl overflow-hidden flex-shrink-0" style="width: 220px;">
+        <img
+          src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=person%20studying%20financial%20charts%20on%20a%20mobile%20phone%2C%20calm%20and%20focused%2C%20warm%20natural%20light%2C%20clean%20minimal%20background%2C%20educational%20and%20empowering%20atmosphere"
+          alt="Learning trading safely"
+          class="w-full h-full object-cover"
+        />
+      </div>
+
     </div>
   </div>
 </section>
